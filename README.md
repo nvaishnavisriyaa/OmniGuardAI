@@ -46,14 +46,16 @@ streamlit run omniguardai.py
    - The transcribed text, classification result, and justification will be displayed.
 
 ## Model Details
-- *Sentiment Analysis Model*: distilbert-base-uncased-finetuned-sst-2-english
-- *Toxicity Classification Model*: unitary/unbiased-toxic-roberta
 - *Automatic Speech Recognition Model*: facebook/wav2vec2-large-960h
+- *Sentiment Analysis Model*: distilbert-base-uncased-finetuned-sst-2-english
+   This model is used to classify whether the text is positive or negative. If text is negative, the text is sent Toxicity Classification Model
+- *Toxicity Classification Model*: unitary/unbiased-toxic-roberta
+   This model classifies whether the text consists of cyberbullying text or not
 
 ## API Key Configuration
 To use Gemini AI for label verification, update the API key in the script:
 python
-API_key = "YOUR_GOOGLE_GENAI_API_KEY"
+API_key = "YOUR_API_KEY"
 
 Make sure to replace it with a valid key.
 
